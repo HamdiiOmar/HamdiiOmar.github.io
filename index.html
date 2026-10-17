@@ -111,6 +111,16 @@ h3{font-size:19px;margin:0;letter-spacing:-.01em}
 .mine{font-size:14px;border-left:3px solid var(--accent);padding:2px 0 2px 12px;margin:0 0 14px;color:var(--muted)}
 .mine strong{color:var(--text)}
 
+.role-panel{background:var(--surface-2);border:1px solid var(--border);border-radius:14px;padding:20px;align-self:start}
+.role-block{border-left:3px solid var(--accent);padding-left:14px;margin-bottom:16px}
+.role-block h4{margin:0 0 4px;font-size:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.role-block p{font-size:14px;margin:0 0 6px}
+.role-block ul{font-size:14px;margin:0;padding-left:18px}
+.role-block li{margin-bottom:4px}
+.modules{display:flex;flex-wrap:wrap;gap:6px}
+.modules span{font-size:12.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted)}
+.modules .mine-mod{background:var(--accent-soft);color:var(--accent-text);border-color:color-mix(in srgb,var(--accent) 40%,transparent);font-weight:600}
+
 /* grid projects */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:flex;flex-direction:column}
@@ -211,7 +221,7 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
   <div class="wrap">
     <div class="sec-head">
       <h2>Featured projects</h2>
-      <p>Cloud security and detection engineering</p>
+      <p>Cloud security, detection engineering and full-stack development</p>
     </div>
 
     <article class="feature">
@@ -266,6 +276,52 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
       </figure>
     </article>
 
+    <article class="feature">
+      <div>
+        <h3>Talentos: HR &amp; Talent Management Platform <span class="badge team">Team project</span></h3>
+        <div class="meta"><span>2025 – 2026</span><span>PI-DEV, ESPRIT</span><span>Web + desktop + services</span></div>
+        <p>A full HR ecosystem that connects candidates, recruiters and administrators across the whole hiring and employee lifecycle. It consists of a Symfony web platform, a JavaFX desktop app sharing the same MySQL database, and supporting Node.js and Python services.</p>
+        <ul>
+          <li><strong>Recruitment with AI scoring</strong>: CVs are parsed and scored 0–100 against each job offer, with Groq and OpenRouter racing to return the fastest answer.</li>
+          <li><strong>Live video interviews</strong> in WebRTC rooms with a live code editor, backed by a Python WebRTC media handler and a Node.js WebSocket chat server.</li>
+          <li><strong>Courses and quizzes</strong> with tab-switch anti-cheat detection, a points economy paid through Stripe, and PDF certificates.</li>
+          <li><strong>Events</strong> with QR-code check-in, feedback and attendance statistics.</li>
+          <li><strong>Security</strong>: Google OAuth 2.0, email verification, account lockout after 5 failed logins, and role-based access for candidates, HR staff and admins.</li>
+          <li><strong>Quality</strong>: 391 PHPUnit tests, PHPStan with 0 errors, 27 Doctrine entities, and a full French/English UI.</li>
+        </ul>
+        <div class="tags"><span class="tag">Symfony 6.4</span><span class="tag">PHP 8.1</span><span class="tag">MySQL</span><span class="tag">Doctrine</span><span class="tag">Twig</span><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">WebRTC</span><span class="tag">WebSocket</span><span class="tag">Stripe</span><span class="tag">Chart.js</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">PHPUnit</span></div>
+        <div class="links">
+          <a href="https://github.com/PI-DEV-JAVA/pi-dev-web" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Web platform</a>
+          <a href="https://github.com/PI-DEV-JAVA/pi-dev-desktop" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Desktop app</a>
+        </div>
+      </div>
+      <div class="role-panel">
+        <p class="subhead">My role</p>
+        <div class="role-block">
+          <h4>Projects &amp; Activities module <span class="badge team">Owner</span></h4>
+          <p>Built on both the web and desktop apps:</p>
+          <ul>
+            <li>Project management with a status lifecycle, budget tracking and automatic progress calculation</li>
+            <li>Drag-and-drop Kanban board with AJAX status updates</li>
+            <li>Activity logging with a built-in timer and time tracking persisted through a REST API</li>
+            <li>Report workflow (submit, approve or reject with feedback), with late-submission detection and revision tracking</li>
+            <li>Chart.js analytics dashboard: monthly trends, approval rates, budget burn rate and top performers</li>
+            <li>Gamified leaderboard with composite scoring and badges</li>
+            <li>PDF reports (DOMPDF), email notifications (Symfony Mailer) and a FullCalendar deadline view</li>
+            <li>Desktop: Trello REST API integration (activities become Trello cards) and SMTP email notifications</li>
+          </ul>
+        </div>
+        <div class="role-block">
+          <h4>Integration</h4>
+          <p>Merged the team's modules into the final web build and added the performance-tracking logic and full database seeder. On the desktop side, integrated the projects, activities and interviews modules.</p>
+        </div>
+        <p class="subhead" style="margin-top:18px">Platform modules</p>
+        <div class="modules">
+          <span>User &amp; profile</span><span>Offers &amp; AI scoring</span><span>Interviews (WebRTC)</span><span>Courses &amp; quizzes</span><span>Events</span><span class="mine-mod">Projects &amp; activities ★</span><span>Messaging &amp; notifications</span><span>Support tickets</span>
+        </div>
+      </div>
+    </article>
+
     <article class="feature single">
       <div>
         <h3>Network Infrastructure Lab <span class="badge team">Team of 6</span></h3>
@@ -292,24 +348,6 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
 
     <div class="grid">
       <article class="card">
-        <div class="top"><h3>Talentos: Web Platform</h3><span class="badge team">Team</span></div>
-        <div class="yr">2025 – 2026 · PI-DEV, ESPRIT</div>
-        <p>A full-stack HR and talent management platform covering recruitment, training, events and project management, with role-based access for admins, HR staff and candidates.</p>
-        <p class="mine"><strong>My part:</strong> the project management module, including status and budget tracking with automatic progress, a drag-and-drop Kanban board (AJAX), real-time time tracking via a REST API, a Chart.js analytics dashboard, a gamified leaderboard, PDF reports (DOMPDF), email notifications and a support ticket system.</p>
-        <div class="tags"><span class="tag">Symfony 6.4</span><span class="tag">PHP 8</span><span class="tag">MySQL</span><span class="tag">Doctrine</span><span class="tag">Twig</span><span class="tag">JavaScript</span></div>
-        <div class="links"><a href="https://github.com/PI-DEV-JAVA/pi-dev-web" target="_blank" rel="noopener">Source code →</a></div>
-      </article>
-
-      <article class="card">
-        <div class="top"><h3>Talentos: Desktop App</h3><span class="badge team">Team</span></div>
-        <div class="yr">2025 – 2026 · PI-DEV, ESPRIT</div>
-        <p>The cross-platform JavaFX companion to the Talentos platform, with real-time video calling, instant messaging over MQTT and live notifications over WebSocket.</p>
-        <p class="mine"><strong>My part:</strong> activity management, including the user/admin workflow, and email notifications through an SMTP mail API.</p>
-        <div class="tags"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">MQTT</span><span class="tag">WebSocket</span><span class="tag">MySQL</span></div>
-        <div class="links"><a href="https://github.com/PI-DEV-JAVA/pi-dev-desktop" target="_blank" rel="noopener">Source code →</a></div>
-      </article>
-
-      <article class="card">
         <div class="top"><h3>Car Rental Back-end</h3><span class="badge">Solo</span></div>
         <div class="yr">2026 · SOA course</div>
         <p>A Spring Boot back-end for a car rental company that manages agencies, vehicles, maintenance, clients, reservations, contracts and payments. It has 9 JPA entities with one-to-many, many-to-many and one-to-one relationships, persisted in MySQL.</p>
@@ -323,15 +361,6 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
         <p>A real-time, Google Meet-style web app with live video and audio, chat, authentication and participant management (approve, mute and kick).</p>
         <div class="tags"><span class="tag">Symfony</span><span class="tag">PHP</span><span class="tag">Twig</span><span class="tag">JavaScript</span></div>
         <div class="links"><a href="https://github.com/HamdiiOmar/UniMeet" target="_blank" rel="noopener">Source code →</a></div>
-      </article>
-
-      <article class="card">
-        <div class="top"><h3>Planova</h3><span class="badge team">Team</span></div>
-        <div class="yr">2024 – 2025 · ESPRIT</div>
-        <p>A desktop application for an architect's office that manages architectural project records, with full CRUD, PDF export and geolocation.</p>
-        <p class="mine"><strong>My part:</strong> the projects module (CRUD) and the interactive map with project markers.</p>
-        <div class="tags"><span class="tag">C++</span><span class="tag">Qt 6.7.3</span></div>
-        <span class="private"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Private team repository</span>
       </article>
 
       <article class="card">
@@ -357,14 +386,6 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
         <p>A graphical desktop game written in C with the SDL library, featuring multiple levels, configurable controls and a tic-tac-toe mini-game.</p>
         <div class="tags"><span class="tag">C</span><span class="tag">SDL</span><span class="tag">Make</span></div>
         <span class="private"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Private team repository</span>
-      </article>
-
-      <article class="card">
-        <div class="top"><h3>EcoSteps</h3><span class="badge">Solo</span></div>
-        <div class="yr">2025</div>
-        <p>A web app that helps users track and improve their environmental habits, like saving water, reducing plastic use or biking instead of driving.</p>
-        <div class="tags"><span class="tag">TypeScript</span><span class="tag">HTML</span><span class="tag">PHP</span></div>
-        <div class="links"><a href="https://github.com/HamdiiOmar/EcoSteps" target="_blank" rel="noopener">Source code →</a></div>
       </article>
     </div>
   </div>
@@ -397,6 +418,11 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
           <ul><li>Focus on cloud and cybersecurity</li></ul>
         </div>
         <div class="item">
+          <div class="when">2019 – 2023</div>
+          <h3>Bachelor en Ingénierie Science</h3>
+          <div class="where">École Amédé Autran</div>
+        </div>
+        <div class="item">
           <div class="when">2023</div>
           <h3>Baccalauréat</h3>
           <div class="where">Lycée Pères Blancs, Tunisia</div>
@@ -427,12 +453,13 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
       <div class="skill"><h3>Networking</h3><div class="tags"><span class="tag">TCP/IP</span><span class="tag">OSPF</span><span class="tag">NAT/PAT</span><span class="tag">VPN</span><span class="tag">Subnetting</span><span class="tag">GNS3</span><span class="tag">Packet Tracer</span></div></div>
       <div class="skill"><h3>Systems &amp; scripting</h3><div class="tags"><span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">VirtualBox</span><span class="tag">Grafana</span><span class="tag">Git</span></div></div>
       <div class="skill"><h3>Languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">PHP 8</span><span class="tag">JavaScript</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">SQL</span></div></div>
-      <div class="skill"><h3>Frameworks &amp; protocols</h3><div class="tags"><span class="tag">Symfony</span><span class="tag">Spring Boot</span><span class="tag">JavaFX</span><span class="tag">Qt</span><span class="tag">REST</span><span class="tag">MQTT</span><span class="tag">WebSocket</span></div></div>
+      <div class="skill"><h3>Frameworks &amp; protocols</h3><div class="tags"><span class="tag">Symfony</span><span class="tag">Spring Boot</span><span class="tag">JavaFX</span><span class="tag">Qt</span><span class="tag">SDL</span><span class="tag">SFML</span><span class="tag">REST</span><span class="tag">MQTT</span><span class="tag">WebSocket</span></div></div>
     </div>
     <div class="langs">
       <div class="lang">Arabic <span>· Native</span></div>
       <div class="lang">French <span>· Fluent</span></div>
       <div class="lang">English <span>· Intermediate</span></div>
+      <div class="lang">Spanish <span>· Basic</span></div>
     </div>
   </div>
 </section>
@@ -441,9 +468,10 @@ try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribu
   <div class="wrap">
     <div class="contact">
       <h2>Let's talk</h2>
-      <p>I'm looking for a summer 2027 internship in cloud, DevOps or security operations, ideally in Germany. The fastest way to reach me is by email.</p>
+      <p>I'm looking for a summer 2027 internship in cloud, DevOps or security operations, ideally in Germany. Reach me by email or phone.</p>
       <div class="cta">
         <a class="btn primary" href="mailto:omar.hamdi204@gmail.com">omar.hamdi204@gmail.com</a>
+        <a class="btn" href="tel:+21620404237">+216 20 404 237</a>
         <a class="btn" href="https://www.linkedin.com/in/hamdi-omar-5b600233b/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/HamdiiOmar" target="_blank" rel="noopener">GitHub</a>
       </div>
